@@ -16,9 +16,9 @@
 
 # Codex Skills and Plugins
 
-This repository is a maintained shelf of reusable Codex skills, a starter plugin, and the docs around them.
+This repository is an open-source collection built around real Codex workflows, bringing together reusable skills, a starter plugin, and bilingual documentation in one place.
 
-It is not trying to be a giant framework or a polished docs portal. The goal is simpler: keep a small set of things that are genuinely useful, easy to copy, and easy to understand when someone is still getting used to Codex.
+It is designed for people who want to use, adapt, or publish Codex workflow building blocks without starting from scratch. The project keeps the structure straightforward, the entry points visible, and the learning curve manageable for newcomers.
 
 ## Start With One Shelf
 
