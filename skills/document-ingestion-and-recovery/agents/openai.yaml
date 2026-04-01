@@ -1,0 +1,4 @@
+interface:
+  display_name: "Document Ingestion and Recovery"
+  short_description: "Extract docs safely with fallback recovery."
+  default_prompt: "Use $document-ingestion-and-recovery to extract this reference document, validate readability, and recover content with fallback paths when extraction is degraded."
