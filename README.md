@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-  <a href="./README.zh-CN.md">简体中文</a> ·
-  <a href="./CONTRIBUTING.md">Contributing</a> ·
+  <a href="./README.zh-CN.md">简体中文</a> |
+  <a href="./CONTRIBUTING.md">Contributing</a> |
   <a href="./plugins/codex-starter/.codex-plugin/plugin.json">Starter Plugin</a>
 </p>
 
@@ -16,27 +16,28 @@
 
 # Codex Skills and Plugins
 
-A mixed-style maintainer homepage for reusable Codex skills, starter plugin scaffolds, and beginner-friendly project docs.
+This repository is a maintained shelf of reusable Codex skills, a starter plugin, and the docs around them.
 
-This repo is meant to feel halfway between a polished documentation hub and a personal toolbox shelf: practical, reusable, and easy to browse even if someone is new to Codex.
+It is not trying to be a giant framework or a polished docs portal. The goal is simpler: keep a small set of things that are genuinely useful, easy to copy, and easy to understand when someone is still getting used to Codex.
 
-## Start Here
+## Start With One Shelf
 
-| I want to... | Go here |
+| If you want to... | Go here |
 | --- | --- |
-| Install ready-to-use skills | [`skills/`](./skills) |
-| Understand the doc ingestion workflow | [`skills/document-ingestion-and-recovery`](./skills/document-ingestion-and-recovery) |
-| Extract `.docx` safely with `markitdown` | [`skills/markitdown-docx-extraction`](./skills/markitdown-docx-extraction) |
-| Use a publishable plugin skeleton | [`plugins/codex-starter`](./plugins/codex-starter) |
-| Publish plugins in a repo marketplace | [`.agents/plugins/marketplace.json`](./.agents/plugins/marketplace.json) |
-| Contribute or adapt this repo | [`CONTRIBUTING.md`](./CONTRIBUTING.md) |
+| Browse reusable skills | [`skills/`](./skills) |
+| Read the document ingestion workflow | [`skills/document-ingestion-and-recovery`](./skills/document-ingestion-and-recovery) |
+| Extract `.docx` with `markitdown` first | [`skills/markitdown-docx-extraction`](./skills/markitdown-docx-extraction) |
+| Start from a publishable plugin skeleton | [`plugins/codex-starter`](./plugins/codex-starter) |
+| See how repo-local plugins are listed | [`.agents/plugins/marketplace.json`](./.agents/plugins/marketplace.json) |
+| Adapt or contribute to this repo | [`CONTRIBUTING.md`](./CONTRIBUTING.md) |
 
-## What Makes This Repo Different
+## What Lives Here
 
-- It ships real skills, not just placeholders.
-- It includes a starter plugin structure that matches Codex plugin conventions.
-- It treats documentation as part of the product, with English and Simplified Chinese entry points.
-- It is built to be copied, remixed, and expanded by maintainers who want a more personal GitHub project style.
+This repo keeps three kinds of building blocks together:
+
+- Skills that solve a real workflow instead of acting as placeholders.
+- A starter plugin that is small enough to understand and solid enough to publish from.
+- Bilingual documentation so the repo stays approachable for both everyday use and first-time setup.
 
 ## Repository Layout
 
@@ -51,28 +52,28 @@ skills/            Reusable Codex skills
 
 ### `document-ingestion-and-recovery`
 
-- Use `markitdown` first for formats it supports.
-- Validate extraction quality by file type.
-- Recover degraded output with OCR or lower-level fallback only when needed.
+- Starts with `markitdown` when the format supports it.
+- Checks extraction quality before moving on.
+- Falls back to OCR or lower-level recovery only when the simpler route is not enough.
 
 ### `markitdown-docx-extraction`
 
-- Focused workflow for `.docx` extraction.
-- Prevents premature ZIP/XML parsing.
-- Encourages readable Markdown sidecar files before analysis work begins.
+- A focused path for `.docx` extraction.
+- Avoids jumping into ZIP/XML parsing too early.
+- Encourages producing a readable Markdown sidecar before review or analysis work.
 
 ## Included Starter Plugin
 
 ### `plugins/codex-starter`
 
-This starter plugin is intentionally lightweight:
+This starter is intentionally plain, but it already covers the parts that are annoying to rebuild every time:
 
-- Includes `.codex-plugin/plugin.json`
-- Includes optional folders for `skills`, `scripts`, `hooks`, and `assets`
-- Includes placeholder companion files for `.mcp.json` and `.app.json`
-- Is already listed in the local marketplace manifest
+- `.codex-plugin/plugin.json`
+- Optional folders for `skills`, `scripts`, `hooks`, and `assets`
+- Placeholder companion files for `.mcp.json` and `.app.json`
+- A matching entry in the local marketplace manifest
 
-Use it as the baseline for your own plugin instead of scaffolding from scratch every time.
+It is meant to be copied, renamed, and shaped into a real plugin without needing to scaffold the same structure from scratch.
 
 ## Quick Setup
 
@@ -82,13 +83,13 @@ Copy the folders under [`skills/`](./skills) into `$CODEX_HOME/skills` or `~/.co
 
 ### Use the starter plugin locally
 
-Copy [`plugins/codex-starter`](./plugins/codex-starter) into a Codex plugin directory and then replace the placeholder metadata in [`plugin.json`](./plugins/codex-starter/.codex-plugin/plugin.json).
+Copy [`plugins/codex-starter`](./plugins/codex-starter) into a Codex plugin directory, then replace the placeholder metadata in [`plugin.json`](./plugins/codex-starter/.codex-plugin/plugin.json).
 
-## Friendly Notes For Beginners
+## If You Are New To Codex
 
-- On GitHub, people usually say `author`, `developer`, or `maintainer` rather than a platform-specific term like Bilibili's `UP主`.
-- If you are new to Codex, start with the skills first. The plugin starter is the next step after you are comfortable with the basics.
-- If terminal output on Windows shows garbled Chinese, check the file in a UTF-8-aware editor before assuming the file itself is broken.
+- Start with the skills. They are the easiest entry point and show the working style of the repo.
+- Move on to the starter plugin when you want to package your own workflow instead of only using local skills.
+- If Chinese text looks garbled in a Windows terminal, check the file in a UTF-8 aware editor before assuming the file itself is broken.
 
 ## License
 
