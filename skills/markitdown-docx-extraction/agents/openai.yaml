@@ -1,4 +1,0 @@
-interface:
-  display_name: "MarkItDown DOCX Extraction"
-  short_description: "Prefer MarkItDown before XML parsing."
-  default_prompt: "Use $markitdown-docx-extraction to convert this DOCX into Markdown, verify readability, and only fall back if extraction fails."

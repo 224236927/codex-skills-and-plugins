@@ -21,7 +21,7 @@ If `markitdown` supports the format, use it first. Then decide whether the outpu
 
 ## XLSX / XLS
 
-- First pass: `markitdown` if it produces a useful table view.
+- First pass: `markitdown`
 - Extra checks:
   - Sheet names are preserved.
   - Headers are readable.
@@ -31,7 +31,7 @@ If `markitdown` supports the format, use it first. Then decide whether the outpu
 
 ## CSV
 
-- First pass: direct text or `markitdown`, whichever preserves row and column structure most clearly.
+- First pass: `markitdown`
 - Extra checks:
   - Delimiter handling is correct.
   - Header row is intact.
@@ -40,7 +40,7 @@ If `markitdown` supports the format, use it first. Then decide whether the outpu
 
 ## TXT
 
-- First pass: direct text read.
+- First pass: `markitdown`
 - Extra checks:
   - Encoding is correct.
   - No mojibake from UTF-8, GBK, or UTF-16 mismatch.
@@ -48,7 +48,7 @@ If `markitdown` supports the format, use it first. Then decide whether the outpu
 
 ## MD
 
-- First pass: direct text read.
+- First pass: `markitdown`
 - Extra checks:
   - Headings, code blocks, and tables remain intact.
 - Usually no recovery is needed unless the file encoding is wrong.
