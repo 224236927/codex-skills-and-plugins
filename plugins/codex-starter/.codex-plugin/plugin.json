@@ -1,0 +1,43 @@
+{
+  "name": "codex-starter",
+  "version": "0.1.0",
+  "description": "Starter Codex plugin scaffold for skills, scripts, hooks, and future integrations.",
+  "author": {
+    "name": "224236927",
+    "email": "224236927@users.noreply.github.com",
+    "url": "https://github.com/224236927"
+  },
+  "homepage": "https://github.com/224236927/codex-skills-and-plugins",
+  "repository": "https://github.com/224236927/codex-skills-and-plugins",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "plugin",
+    "template",
+    "starter"
+  ],
+  "skills": "./skills/",
+  "hooks": "./hooks.json",
+  "mcpServers": "./.mcp.json",
+  "apps": "./.app.json",
+  "interface": {
+    "displayName": "Codex Starter",
+    "shortDescription": "A lightweight starter plugin you can fork and publish.",
+    "longDescription": "A minimal but structured Codex plugin scaffold with placeholder assets, optional companion files, and a starter skill folder for future expansion.",
+    "developerName": "224236927",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/224236927/codex-skills-and-plugins",
+    "privacyPolicyURL": "https://github.com/224236927/codex-skills-and-plugins",
+    "termsOfServiceURL": "https://github.com/224236927/codex-skills-and-plugins",
+    "defaultPrompt": [
+      "Help me adapt this starter plugin for my project.",
+      "Turn this plugin skeleton into a memory workflow.",
+      "Add a new skill and update the plugin metadata."
+    ],
+    "brandColor": "#1F6FEB"
+  }
+}

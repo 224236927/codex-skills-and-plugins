@@ -1,0 +1,35 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="640" rx="36" fill="#0F172A"/>
+  <rect x="32" y="32" width="1216" height="576" rx="28" fill="url(#bg)"/>
+  <circle cx="1062" cy="140" r="118" fill="#F59E0B" fill-opacity="0.18"/>
+  <circle cx="1130" cy="252" r="170" fill="#38BDF8" fill-opacity="0.14"/>
+  <circle cx="948" cy="514" r="152" fill="#22C55E" fill-opacity="0.12"/>
+  <rect x="84" y="92" width="248" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.12"/>
+  <text x="108" y="118" fill="#DCE8FF" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600">Codex starter shelf</text>
+  <text x="84" y="218" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="64" font-weight="700">Skills, plugins, docs.</text>
+  <text x="84" y="290" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="64" font-weight="700">One mixed-style maintainer hub.</text>
+  <text x="86" y="356" fill="#D6E4FF" font-family="Segoe UI, Arial, sans-serif" font-size="28">Beginner-friendly Codex workflows, a publishable plugin starter,</text>
+  <text x="86" y="394" fill="#D6E4FF" font-family="Segoe UI, Arial, sans-serif" font-size="28">and a repo homepage that feels more personal than boilerplate.</text>
+  <rect x="84" y="448" width="252" height="74" rx="18" fill="#F8FAFC"/>
+  <text x="112" y="476" fill="#0F172A" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Ready to explore</text>
+  <text x="112" y="507" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="18">skills/  plugins/  marketplace</text>
+  <rect x="366" y="448" width="220" height="74" rx="18" fill="#0F172A" fill-opacity="0.24" stroke="#FFFFFF" stroke-opacity="0.24"/>
+  <text x="394" y="476" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Bilingual docs</text>
+  <text x="394" y="507" fill="#D6E4FF" font-family="Segoe UI, Arial, sans-serif" font-size="18">README + README.zh-CN</text>
+  <rect x="886" y="116" width="254" height="130" rx="24" fill="#FFFFFF" fill-opacity="0.86"/>
+  <text x="914" y="156" fill="#111827" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Starter plugin</text>
+  <text x="914" y="192" fill="#374151" font-family="Segoe UI, Arial, sans-serif" font-size="18">.codex-plugin/plugin.json</text>
+  <text x="914" y="222" fill="#374151" font-family="Segoe UI, Arial, sans-serif" font-size="18">skills / hooks / scripts / assets</text>
+  <rect x="844" y="300" width="322" height="166" rx="24" fill="#081121" fill-opacity="0.74" stroke="#93C5FD" stroke-opacity="0.35"/>
+  <text x="876" y="344" fill="#93C5FD" font-family="Consolas, monospace" font-size="20">.agents/plugins/</text>
+  <text x="876" y="381" fill="#E5F0FF" font-family="Consolas, monospace" font-size="20">marketplace.json</text>
+  <text x="876" y="420" fill="#E5F0FF" font-family="Segoe UI, Arial, sans-serif" font-size="18">Repo-local plugin catalog</text>
+  <text x="876" y="452" fill="#E5F0FF" font-family="Segoe UI, Arial, sans-serif" font-size="18">with starter entry included</text>
+  <defs>
+    <linearGradient id="bg" x1="92" y1="88" x2="1192" y2="586" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D4ED8"/>
+      <stop offset="0.5" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#14532D"/>
+    </linearGradient>
+  </defs>
+</svg>

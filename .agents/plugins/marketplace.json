@@ -1,0 +1,20 @@
+{
+  "name": "codex-skills-and-plugins",
+  "interface": {
+    "displayName": "Codex Skills and Plugins"
+  },
+  "plugins": [
+    {
+      "name": "codex-starter",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex-starter"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
