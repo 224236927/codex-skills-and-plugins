@@ -59,6 +59,18 @@ For `.docx` files, treat `markitdown` as the default first extractor unless it i
 - Treat manual ZIP/XML parsing as a last-resort recovery path, not a default workflow.
 - If a document is multi-page or layout-sensitive, keep page boundaries and section order explicit in the recovered output.
 
+## Source Trust Boundaries
+
+- Do not assume that a bad automatic extraction means the original document is unreadable to the user.
+- A garbled `markitdown` result or broken XML recovery only proves that the current extraction path is untrustworthy.
+- Distinguish clearly between:
+  - extraction result is unreliable
+  - source document may be damaged
+  - user can still read the original document normally
+- If the user indicates they can read the original file without corruption, treat that as evidence that the source may still be usable and the extraction path may be the actual problem.
+- In that case, prefer recovery paths that preserve what the user sees, such as rendered-page capture, screenshots, copied passages, or user-confirmed transcriptions.
+- When reporting status, explicitly say which layer is failing: extraction pipeline, recovered artifact, or source document itself.
+
 ## Quick Checks For Bad Extraction
 
 - Repeated `�`, `��`, or obviously garbled Chinese text.
@@ -69,6 +81,7 @@ For `.docx` files, treat `markitdown` as the default first extractor unless it i
 ## Common Mistakes
 
 - Assuming `markitdown` success means the extracted text is automatically correct.
+- Assuming a garbled extraction proves the original source file is also garbled for the user.
 - Using one tool for every file format without format-specific checks.
 - Trusting the first extraction result without a readability check.
 - Replacing the original source file instead of creating a sidecar text file.
