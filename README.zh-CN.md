@@ -26,6 +26,7 @@
 | --- | --- |
 | 直接看看可复用的 skills | [`skills/`](./skills) |
 | 了解文档摄取与恢复流程 | [`skills/document-ingestion-and-recovery`](./skills/document-ingestion-and-recovery) |
+| 直接发送飞书通知、卡片和附件 | [`skills/direct-feishu-notify`](./skills/direct-feishu-notify) |
 | 先用 `markitdown` 提取 `.docx` | [`skills/markitdown-docx-extraction`](./skills/markitdown-docx-extraction) |
 | 从一个可发布的插件骨架开始 | [`plugins/codex-starter`](./plugins/codex-starter) |
 | 看仓库内插件如何挂到 marketplace | [`.agents/plugins/marketplace.json`](./.agents/plugins/marketplace.json) |
@@ -55,6 +56,12 @@ skills/            可复用的 Codex skills
 - 对支持的格式优先走 `markitdown`。
 - 先检查提取质量，再决定是否继续处理。
 - 只有在简单路径不够用时，才退回到 OCR 或更底层的补救方案。
+
+### `direct-feishu-notify`
+
+- 发送飞书文本、卡片、图片、文件、视频和音频气泡。
+- 真实应用凭据放在本地忽略配置里，不把 secret 提交到仓库。
+- 适合从 Codex 会话里直接发状态通知和结果摘要。
 
 ### `markitdown-docx-extraction`
 

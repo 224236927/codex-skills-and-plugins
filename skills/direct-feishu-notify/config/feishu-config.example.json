@@ -1,0 +1,7 @@
+{
+  "app_id": "cli_xxxxxxxxxxxxxxxxx",
+  "app_secret": "replace-with-your-feishu-app-secret",
+  "default_target": "ou_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "default_receive_id_type": "open_id",
+  "ffmpeg_path": ""
+}

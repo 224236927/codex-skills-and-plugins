@@ -26,6 +26,7 @@ It is designed for people who want to use, adapt, or publish Codex workflow buil
 | --- | --- |
 | Browse reusable skills | [`skills/`](./skills) |
 | Read the document ingestion workflow | [`skills/document-ingestion-and-recovery`](./skills/document-ingestion-and-recovery) |
+| Send Feishu notifications, cards, and attachments | [`skills/direct-feishu-notify`](./skills/direct-feishu-notify) |
 | Extract `.docx` with `markitdown` first | [`skills/markitdown-docx-extraction`](./skills/markitdown-docx-extraction) |
 | Start from a publishable plugin skeleton | [`plugins/codex-starter`](./plugins/codex-starter) |
 | See how repo-local plugins are listed | [`.agents/plugins/marketplace.json`](./.agents/plugins/marketplace.json) |
@@ -55,6 +56,12 @@ skills/            Reusable Codex skills
 - Starts with `markitdown` when the format supports it.
 - Checks extraction quality before moving on.
 - Falls back to OCR or lower-level recovery only when the simpler route is not enough.
+
+### `direct-feishu-notify`
+
+- Sends Feishu text messages, interactive cards, images, files, videos, and audio bubbles.
+- Keeps real app credentials in a local ignored config instead of committing secrets.
+- Works well for concise status reports and result summaries sent from a Codex session.
 
 ### `markitdown-docx-extraction`
 
