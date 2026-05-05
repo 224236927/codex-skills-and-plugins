@@ -1,0 +1,4 @@
+interface:
+  display_name: "Anime Hype AMV"
+  short_description: "Beat-synced anime montage cuts"
+  default_prompt: "Create a publish-ready anime hype montage from local footage. Inspect source scenes and subtitles first, choose a release theme, build a music beat map, align BGM peaks to emotional and action cuts, preserve meaningful source dialogue/subtitles, render, and verify the exact output."
