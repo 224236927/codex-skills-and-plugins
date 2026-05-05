@@ -1,6 +1,6 @@
 ---
 name: anime-hype-amv
-description: Use when making, revising, or QAing anime high-energy AMV/montage videos from local episode footage with ffmpeg plus HyperFrames, including BGM selection or timing, beat-synced cuts, source subtitles, original dialogue, impact rendering, title/description drafting, publish exports, and cleanup of AMV project artifacts.
+description: Use when making, revising, or QAing anime high-energy AMV/montage videos from local episode footage or approved still/image sequences with ffmpeg plus HyperFrames, including BGM selection or timing, beat-synced cuts, source subtitles, original dialogue, impact rendering, title/description drafting, publish exports, and cleanup of AMV project artifacts.
 ---
 
 # Anime Hype AMV
@@ -18,6 +18,7 @@ The companion project for this skill is `F:\CodexWorkspace\projects\anime-hype-a
 - Do not add random variety-show labels. Any text overlay must match the exact meaning of the shot and should be omitted unless it adds force.
 - Do not cut in episode title cards, OP/ED cards, blank transitions, or source frames that only exist as navigation filler.
 - Do not let the edit become a feature showcase. Rendering effects must serve impact, clarity, or rhythm.
+- Treat a requested formal cut as a publish candidate, not a preview. Iterate privately until dense frame checks and motion checks look acceptable before showing it to the user.
 - Before presenting a file, prove the exact output with path, duration, size, SHA256, format, contact sheet, and representative frame checks.
 - If the user says not to embed samples in chat, never embed the video in the conversation.
 
@@ -61,6 +62,9 @@ Use ffmpeg plus HyperFrames by default.
    - Use mild zoom, contrast/saturation, sharpen, flash, shake, speed ramps, or glow only where they support a beat.
    - Shake belongs on impacts, explosions, releases, or panic. It should not run continuously.
    - Flash belongs on hard cuts, reveals, attacks, and impact frames. Keep it short.
+   - Vary camera motion and transitions by shot meaning. Do not loop the same two or three moves across the whole film unless the repetition is an intentional motif.
+   - For still-image or motion-comic montages, inspect each image for real or implied light sources before adding glows, lantern flicker, lightning, rim light, or bloom. Do not let the effect make the character glow unless that is the shot's actual meaning.
+   - For rain, snow, smoke, sparks, or similar particles, match direction, speed, density, depth, and duration to the shot. Do not leave weather running across dialogue or closeups where it distracts from the face.
    - Keep subtitles readable after crop, zoom, and effects.
    - Force standard platform geometry such as 1280x720 or 1920x1080 with SAR 1:1 and DAR 16:9 unless the user asks otherwise.
 6. Finish the ending:
@@ -90,6 +94,8 @@ Before calling an AMV ready:
 
 - Contact sheet shows the intended story/energy arc and no title cards.
 - Representative frame checks include early setup, first tension beat, pre-climax, climax, ending, and any subtitle-heavy dialogue.
+- For effect-heavy cuts, generate dense frame sheets from the final muxed video, plus short motion strips for risky effects such as rain, lightning, glow, shake, speed ramps, or wipes. If the stills cannot reveal the problem, extract adjacent frames or short strips until the motion is visible.
+- Check lighting and particles against the actual image content: light source placement, face edges, occlusion, weather direction, and whether effects appear only where the shot needs them.
 - Final file is unique and unambiguous; do not hand off `latest.mp4`.
 - Record exact path, duration, size, SHA256, video format, audio format, and contact sheet path.
 - Run at least one full-file loudness check and one climax-range loudness check.
@@ -102,7 +108,8 @@ For Bilibili-style release copy:
 
 - Title should be concrete, emotional, and built around the strongest theme or action. Do not mention version numbers, tests, or workflow.
 - Avoid vague hype words alone. Pair them with the specific conflict, choice, or payoff.
-- Description should be short: one hook sentence, one context sentence if needed, and optional source/work note.
+- Description should sound like a viewer-facing post, not a production note. Keep it short: one atmospheric hook, one emotional/context sentence if needed, and optional source/BGM notes.
+- Do not explain fixes, render choices, QA, or internal criticism in the public description.
 - Do not overpromise if the footage is more emotional than combat-heavy. Match the title to the actual edit.
 
 ## Failure Handling
@@ -110,6 +117,9 @@ For Bilibili-style release copy:
 - Feels like a demo: remove decorative effects and rebuild around theme, music beats, and source meaning.
 - BGM not踩点: build a beat map, then retime music sections so lifts/drops land on visual meaning changes.
 - BGM peak arrives early: delay the peak to the action release or impact frame.
+- Weather looks fake: reduce it, localize it, or rebuild it with coherent direction and depth; do not keep a weak full-screen particle layer just because the theme includes weather.
+- Lighting is off target: make a per-shot light-source pass and remove effects from shots where the source is unclear or the face becomes visibly self-luminous.
+- Motion or transitions feel shallow: rewatch the shot sequence and assign movement by purpose, such as reveal, pursuit, pressure, impact, breath, or aftermath, instead of cycling presets.
 - Source audio/subtitles missing: restore them for important dialogue or choose a shot that works without dialogue.
 - Subtitles out of sync: fix clip-local retiming; do not hide the problem with effects.
 - Not enough impact: replace weak source shots first, then add rendering effects.
