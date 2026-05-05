@@ -26,7 +26,8 @@ The companion project for this skill is `F:\CodexWorkspace\projects\anime-hype-a
 Use ffmpeg plus HyperFrames by default.
 
 - Use ffmpeg for the source edit: trimming, speed changes, source audio, source subtitle retiming/burning, BGM retiming/ducking, loudness checks, final muxing, contact sheets, and deterministic publish exports.
-- Use HyperFrames for the design layer: title cards, end cards, typography, motion graphics, glow/sweep accents, beat-reactive overlays, animated labels that match the shot, and complex visual packaging.
+- Use the Codex-installed HyperFrames plugin for the design layer: title cards, end cards, typography, motion graphics, glow/sweep accents, beat-reactive overlays, animated labels that match the shot, and complex visual packaging.
+- Do not install a separate HyperFrames package/toolchain inside the AMV project unless the user explicitly asks for that. Prefer the existing Codex HyperFrames plugin skills and CLI.
 - Keep the anime footage and source subtitles authoritative. HyperFrames overlays must not cover important dialogue subtitles or hide the meaning of the source shot.
 - Do not replace a clean ffmpeg cut with HyperFrames just to show the tool. HyperFrames must add publish value: clearer theme, stronger rhythm, better ending, or a more deliberate climax.
 - When combining both, render the ffmpeg source cut first, add HyperFrames packaging/overlay layers second, then run final ffmpeg QA and export.
