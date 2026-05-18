@@ -14,6 +14,29 @@ Do not replace VFX execution cards with edit grammar. If the reference has a vis
 
 Use one "big technique package" only when edit, VFX, and music are inseparable. Even then, include explicit `edit`, `vfx`, and `music` sections.
 
+## Card Admission Gates
+
+Every card must answer one question: can a fresh agent reproduce the technique without guessing? If not, it stays a candidate card.
+
+Production status meanings:
+
+- `candidate`: observed in a reference or proposed, but not yet reproduced.
+- `failed`: attempted and rejected; keep only if the failure teaches a boundary.
+- `experimental`: partially works, but not stable enough for a formal cut.
+- `positive-sample-passed`: has a reviewed sample and can be used with the stated limits.
+- `production-ready`: has been used successfully in a formal cut and has enough recipe detail for reuse.
+
+Global gates for all card families:
+
+- Reference evidence: source video/timecode plus dense frames or motion strip.
+- Self-made proof: sample video, sample audio-visual clip, or final-cut binding.
+- Review result: human/Gemini/raw model conclusion with pass/fail and reason; do not summarize away harsh findings.
+- Reproduction recipe: ordered steps, inputs, outputs, tool route, parameters, and acceptance checks.
+- Scope: material requirements, best-use context, do-not-use conditions, and failure modes.
+- Evidence paths: all frames, samples, scripts, attempt logs, and review files must be local paths in the active project.
+
+Do not promote a card because the prose sounds good. Promote only after proof.
+
 ## Execution Card Types
 
 ### VFX Execution Card
@@ -33,17 +56,24 @@ layer stack:
 mask/matte sources:
 motion process:
 implementation route: HyperFrames / Remotion / Canvas-WebGL / FFmpeg-OpenCV / pre-rendered matte / hybrid
+dependency/tool versions:
+core code path:
+core code excerpt:
 parameter ranges:
 source material requirements:
 positive sample path:
+dense-frame proof path:
 attempt log path:
+aesthetic review path:
+aesthetic review verdict:
 failure modes:
 acceptance checks:
+reproduction steps:
 do not use when:
 production status: disabled / experimental / positive-sample-passed / production-ready
 ```
 
-Acceptance checks must prove the effect in motion and in dense frames. A prose-only card is not production-ready.
+VFX hard gate: acceptance checks must prove the effect in motion and in dense frames, and the card must preserve either the core code or a runnable project/script path. For Remotion/HyperFrames/Canvas/shader work, include the component/function path and the key parameter block. For FFmpeg/OpenCV work, include the exact command or script path. A prose-only card is not production-ready.
 
 ### Typography VFX Execution Card
 
@@ -54,6 +84,34 @@ Typography is still VFX. It needs sampled color, edge texture, motion curve, pla
 ### Transition / Edit Execution Card
 
 For A-shot to B-shot joins: black-frame cuts, white-flash hits, match cuts, wipe transitions, occlusion cuts, motion blur cuts, mask reveals, smash cuts.
+
+Required edit fields:
+
+```text
+name:
+type: edit execution card
+reference source:
+reference evidence:
+edit goal:
+screen context:
+shot pattern:
+frame/timing rules:
+motion/action phase rules:
+camera/framing rules:
+bridge frames or transition surface:
+source material requirements:
+self-made sample path:
+final-cut binding path:
+attempt log path:
+review verdict:
+failure modes:
+acceptance checks:
+reproduction steps:
+do not use when:
+production status: candidate / failed / experimental / positive-sample-passed / production-ready
+```
+
+Edit hard gate: the card must specify cut points in frames or seconds, motion direction, action phase, subject scale/position, and how the next agent should search/select source shots. At least one self-made sample or final-cut binding is required before use in a formal cut.
 
 ### Camera / Movement Edit Execution Card
 
@@ -81,10 +139,18 @@ source-audio / SFX plan:
 ducking plan:
 visual-hit bindings:
 loudness targets:
+generation metadata:
 rejection conditions:
 positive sample path:
-production status:
+final-cut binding path:
+review verdict:
+failure modes:
+acceptance checks:
+reproduction steps:
+production status: candidate / failed / experimental / positive-sample-passed / production-ready
 ```
+
+Music hard gate: the card must identify the phrase structure, transient/hit locations, peak owner, source audio/SFX decisions, and loudness targets. If the BGM is generated, record model, prompt, seed/job id when available, generation time, chosen take, and rejected takes. At least one positive audio-visual sample or final-cut binding is required before the card can govern a formal cut.
 
 ### Material-Selection Card
 

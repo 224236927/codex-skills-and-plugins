@@ -44,6 +44,16 @@ For a complex visual reference, prefer a technique package with separate edit/VF
 
 Hard rule: a visual technique is not usable in production until its VFX execution card has a positive sample or an explicit "disabled/experimental" status. Written analysis, Gemini approval of prose, or a negative sample is not enough. If the VFX card has no accepted positive sample, do not smuggle the effect into a full cut.
 
+Hard rule: every production card must be reproducible by a fresh agent. A card is not production-ready until it contains the artifact paths, parameters, timing rules, review result, and implementation recipe needed to recreate the result without relying on the original author's taste or memory.
+
+Minimum admission gates:
+
+- VFX cards require a rendered positive sample, dense-frame proof, aesthetic review result, implementation route, core code or runnable project path, parameter ranges, dependency/tool versions, failure modes, and source-material requirements.
+- Edit cards require reference evidence, frame/timing rules, motion/action phase rules, source-material requirements, at least one self-made timeline sample or final-cut binding, failure modes, and a step-by-step reconstruction procedure.
+- Music cards require phrase map, beat/transient map, peak owner, source-audio/SFX/ducking plan, loudness targets, positive audio-visual sample or final-cut binding, generation metadata when applicable, rejection conditions, and a step-by-step reconstruction procedure.
+
+Candidate cards may be kept for analysis, but only cards whose `production status` is `positive-sample-passed` or `production-ready` may guide a formal cut. If a card is attractive but lacks proof, prototype it first.
+
 ## Reference Technique Library Workflow
 
 Use this module when the user says to reference, deeply learn, imitate the feeling of, build a technique library from, or compare against a video style. This is not ordinary Bilibili summarization. Acquisition tools may fetch the reference, but this skill owns the creative extraction.
