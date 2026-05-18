@@ -1,4 +1,4 @@
 interface:
   display_name: "Anime Hype AMV"
-  short_description: "Publish-ready anime montage cuts"
-  default_prompt: "Create a publish-ready anime hype montage from local footage or approved still/image sequences. Inspect the source first, choose a release theme, build a music beat map, align BGM peaks to emotional and action cuts, use effects only where the shot supports them, render, and verify the final muxed output with dense frame and motion checks before delivery."
+  short_description: "Anime AMV cuts and execution-card technique libraries"
+  default_prompt: "Create or revise an anime hype montage from local footage or approved still/image sequences. Inspect the source first, choose a release theme, build or load the project technique library, and use edit/VFX/music execution cards. For visible effects, masks, typography, displacement, particles, ripple, texture, or transitions, make positive HyperFrames/Remotion/Canvas/FFmpeg samples before full-cut use. Align music peaks to visual owners, render, and verify dense frames, motion, audio, and final muxed output before delivery."
